@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import="bean.*,util.*,java.util.*"  %>
+    <%@ page import="org.itsci.fishshop.model.*,org.itsci.fishshop.dao.*,java.util.*"  %>
         <%List<Payment> lg = (List<Payment>) request.getAttribute("Payment"); %>
     <% int r = 0;
 try{

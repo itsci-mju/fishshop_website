@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="bean.*,util.*,java.util.*"  %>
+<%@ page import="org.itsci.fishshop.model.*,org.itsci.fishshop.dao.*,java.util.*"  %>
 <% List<Product> list = (List<Product>) request.getAttribute("result");
   
 %>
