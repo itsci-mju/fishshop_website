@@ -20,9 +20,9 @@
 <a href="LoadAddNews">AddNews</a><br>
 <a href="SearchNews">EditNews</a><br>
 <a href="SearchProduct">EditProduct</a><br>-->
-<td><a href="loadAllProduct">สินค้า</a></td>
-<td><a href="loadAllNews">ข่าว</a></td>
-<td><a href="loadprofile">โปรไฟล์</a></td>
+<a href="loadAllProduct">สินค้า</a><br>
+<a href="loadAllNews">ข่าว</a><br>
+<a href="loadprofile">โปรไฟล์</a><br>
 </table>
 </body>
 </html>

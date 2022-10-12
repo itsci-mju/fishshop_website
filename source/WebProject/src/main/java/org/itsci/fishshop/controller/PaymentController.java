@@ -28,7 +28,7 @@ public class PaymentController {
     }
 	
 	@RequestMapping(value = "/LoadPayment", method = RequestMethod.POST)
-	public ModelAndView doAddProduct(HttpServletRequest request) {
+	public ModelAndView doAddPayment(HttpServletRequest request) {
 		String message = "";
 		ProductManager pg = new ProductManager(); 
 		int PAID = pg.getMaxProductID();
