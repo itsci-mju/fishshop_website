@@ -23,9 +23,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Mali:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
     <!--- CSS --->
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/add-news.css">
 
-    <title>###</title>
+    <title>เพิ่มข่าวสาร</title>
 </head>
 
 <body>
@@ -63,7 +63,7 @@
     <div class="content" id="content"></div>
 
     <!-----main-website------>
-    <section class="contain-main">
+    <section class="add-news_website">
         <div class="add-news_main">
             <div class="add-news_txt">
                 <h2 class="add-n-title">หน้าต่างเพิ่มข่าวสารข้อมูล</h2>
@@ -72,13 +72,21 @@
             <div class="add-news-content">
                 <div class="news-add_group">
                     <div class="news-add_name">
+                        <span class="txt_name">เพิ่มชื่อข่าวสาร</span>
                         <input type="text" class="add-news_name--textbox" placeholder="ชื่อหัวข่าว" required
                             class="name">
                         <i class="fa-solid fa-newspaper"></i>
                     </div>
                 </div>
                 <div class="news-add_group">
+                    <div class="news-add_date">
+                        <span class="txt_date">เพิ่มวันที่</span>
+                        <input type="date" class="news-add_other--txt" placeholder="00/00/0000">
+                    </div>
+                </div>
+                <div class="news-add_group">
                     <div class="news-add_img">
+                        <span class="txt_img">เพิ่มรูปภาพ</span>
                         <input type="file" required class="name" class="news-add-img_news">
                     </div>
                 </div>
@@ -88,22 +96,18 @@
                             placeholder="รายละเอียดของข่าว" class="news-add_detail_txa"></textarea>
                     </div>
                 </div>
-                <div class="news-add_group">
-                    <div class="news-add_other">
-                        <input type="text" class="news-add_other--txt" placeholder="ข้อมูลเพิ่มเติม">
-                    </div>
-                </div>
+
 
                 <div class="news-add_group">
                     <div class="news-add_type-txt">
-                        <h4 class="news-name_type">เพิ่มไปยังหมวดหมู่</h4>
+                        <h4 class="news-name_type">เพิ่มไปยังหมวดหมู่ </h4>
                     </div>
                     <div class="news-ul_type">
-                        <ul class="news_type-detail">
-                            <li class="news_type-name">ข่าวทั่วไป</li>
-                            <li class="news_type-name">ข่าววิชาการ</li>
-                            <li class="news_type-name">บริการวิชาการ</li>
-                        </ul>
+                        <select class="news_type-detail">
+                            <option class="news_type-name">ข่าวทั่วไป</option>
+                            <option class="news_type-name">ข่าววิชาการ</option>
+                            <option class="news_type-name">บริการวิชาการ</option>
+                        </select>
                     </div>
                 </div>
                 <div class="news-add_group">
@@ -111,7 +115,7 @@
                         <button type="submit" class="news-submit">กดยืนยัน</button>
                     </div>
                     <div class="news-back_cancel">
-                        
+                        <button type="reset" class="news-reset">ยกเลิก</button>
                     </div>
                 </div>
             </div>

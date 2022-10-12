@@ -265,7 +265,53 @@ nav ul li:hover>a span {
 }
 
 /* ------------------------------------- Start main website -------------------------------- */
+.add-news_website{
+    padding-bottom: 120px;
+    background-color: #f3f4fa;
+}
 
+.add-news_website .add-news_main{
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.add-news_website .add-news_txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 130px;
+}
+
+.add-news_txt .add-n-title{
+    width: 400px;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1.3;
+    letter-spacing: 0;
+    background: linear-gradient(91.17deg, #8486ff 0.7%, #90b4ff 21.75%, #adb4de 44.2%, #d29edf 65.72%, #ced3de 90.51%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.add-news_txt .add-n-sub-tt{
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.add-news_main .add-news-content{
+    padding: 40px 90px 50px;
+    background-color: #fff;
+}
+
+.add-news_main .news-add_group{
+    display: flex;
+    
+}
 /* ------------------------------------- End main website --------------------------------- */
 
 /*contact*/
