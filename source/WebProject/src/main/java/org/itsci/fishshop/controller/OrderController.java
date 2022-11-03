@@ -22,18 +22,23 @@ import org.itsci.fishshop.dao.ProductManager;
 @Controller
 public class OrderController {
 
+	@RequestMapping(value="/", method=RequestMethod.GET)
+    public String loadpayment() {
+        return "";
+    }
+	
 	@RequestMapping(value = "/", method = RequestMethod.POST)
 	public ModelAndView doAddProduct(HttpServletRequest request) {
 		String message = "";
-		ModelAndView mav = new ModelAndView("");
-		if (ServletFileUpload.isMultipartContent(request)) {
+		ModelAndView mav = new ModelAndView("Order");
 			try { 
+				
 				
 			} catch (Exception e) {
 				e.printStackTrace();
 				message = "Please try again....";
 			}
-		}
+		
 
 		mav.addObject("message", message);
 		return mav;
