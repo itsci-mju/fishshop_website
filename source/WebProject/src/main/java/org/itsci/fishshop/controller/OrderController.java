@@ -22,11 +22,6 @@ import org.itsci.fishshop.dao.ProductManager;
 @Controller
 public class OrderController {
 
-	@RequestMapping(value="/", method=RequestMethod.GET)
-    public String loadpayment() {
-        return "";
-    }
-	
 	@RequestMapping(value = "/", method = RequestMethod.POST)
 	public ModelAndView doAddProduct(HttpServletRequest request) {
 		String message = "";

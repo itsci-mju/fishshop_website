@@ -21,52 +21,53 @@ import org.itsci.fishshop.model.Address;
 @Controller
 public class AddressController {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
-		@Controller
-		public class AddProductController {
-			@RequestMapping(value = "/LoadAddress", method = RequestMethod.GET)
-			public String loadRegisterPage() {
-				return "Address";
-			}
+    }
 
-			@RequestMapping(value = "/LoadisAddress", method = RequestMethod.POST)
-			public ModelAndView doAddRegister(HttpServletRequest request) {
-				String message = "";
-				AddressManager pm = new AddressManager();
-				int AID = pm.getMaxAddressID();
-				String AddressID = String.valueOf(AID);
-				System.out.println(AID);
-				System.out.println(AddressID);
-				ModelAndView mav = new ModelAndView("Payment");
-				if (ServletFileUpload.isMultipartContent(request)) {
-					try { 
-						List<FileItem> data = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
-						String TrackNo =   new String(data.get(0).get(),StandardCharsets.UTF_8);  
-						String Street = new String(data.get(1).get(),StandardCharsets.UTF_8);
-						String SubDistrict =  new String(data.get(2).get(),StandardCharsets.UTF_8);
-						String District =   new String(data.get(3).get(),StandardCharsets.UTF_8);
-						String Province =  new String(data.get(4).get(),StandardCharsets.UTF_8);
-						String ZipCode =  new String(data.get(5).get(),StandardCharsets.UTF_8);
-						String TelNo =  new String(data.get(6).get(),StandardCharsets.UTF_8);
-						String Email = request.getParameter("Email");
-						Register  res = new Register();
-						res = pm.Register(Email);
-						Address rs = new Address(AID,TrackNo,Street,SubDistrict,District,Province,ZipCode,TelNo,res);
-						message = pm.insertAddreess(rs);
-						//String path = request.getSession().getServletContext().getRealPath("/") + "\\images";
-						//data.get(0).write(new File(path + File.separator + ProductPic));
-					} catch (Exception e) {
-						e.printStackTrace();
-						message = "Please try again....";
-					}
-				}
+    @Controller
+    public class AddProductController {
+        @RequestMapping(value = "/LoadAddress", method = RequestMethod.GET)
+        public String loadRegisterPage() {
+            return "Address";
+        }
 
-				mav.addObject("message", message);
-				return mav;
-			}
-			
-	}
+        @RequestMapping(value = "/LoadisAddress", method = RequestMethod.POST)
+        public ModelAndView doAddRegister(HttpServletRequest request) {
+            String message = "";
+            AddressManager pm = new AddressManager();
+            int AID = pm.getMaxAddressID();
+            String AddressID = String.valueOf(AID);
+            System.out.println(AID);
+            System.out.println(AddressID);
+            ModelAndView mav = new ModelAndView("Payment");
+            if (ServletFileUpload.isMultipartContent(request)) {
+                try {
+                    List<FileItem> data = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
+                    String TrackNo = new String(data.get(0).get(), StandardCharsets.UTF_8);
+                    String Street = new String(data.get(1).get(), StandardCharsets.UTF_8);
+                    String SubDistrict = new String(data.get(2).get(), StandardCharsets.UTF_8);
+                    String District = new String(data.get(3).get(), StandardCharsets.UTF_8);
+                    String Province = new String(data.get(4).get(), StandardCharsets.UTF_8);
+                    String ZipCode = new String(data.get(5).get(), StandardCharsets.UTF_8);
+                    String TelNo = new String(data.get(6).get(), StandardCharsets.UTF_8);
+                    String Email = request.getParameter("Email");
+                    Register res = new Register();
+                    res = pm.Register(Email);
+                    Address rs = new Address(AID, TrackNo, Street, SubDistrict, District, Province, ZipCode, TelNo, res);
+                    message = pm.insertAddreess(rs);
+                    //String path = request.getSession().getServletContext().getRealPath("/") + "\\images";
+                    //data.get(0).write(new File(path + File.separator + ProductPic));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    message = "Please try again....";
+                }
+            }
+
+            mav.addObject("message", message);
+            return mav;
+        }
+
+    }
 }
